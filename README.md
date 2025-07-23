@@ -29,6 +29,8 @@ Visit: [http://localhost:5000](http://localhost:5000)
 
 ### Features
 - All v1 features
+- Added reset button
+- Removed auto reset after win or draw
 - Toggle button to switch between **light** and **dark** themes
 - Style sheets: `style-light.css` and `style-dark.css`
 
