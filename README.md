@@ -60,4 +60,4 @@ tic-tac-toe/
 ---
 
 ## 📦 License
-This project is open-sourced for educational and demonstration purposes only.
+This project is open-sourced for educational and demonstration purposes.
