@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tic Tac Toe</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    /* Dark Theme */
+    body.dark {
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+    body.dark td {
+      background-color: #1e1e1e;
+      color: #e0e0e0;
+      border: 1px solid #444;
+    }
+    body.dark td:hover {
+      background-color: #2a2a2a;
+    }
+    body.dark #reset, body.dark #theme-toggle {
+      background-color: #333;
+      border: 1px solid #555;
+      color: #fff;
+    }
+    body.dark #reset:hover, body.dark #theme-toggle:hover {
+      background-color: #444;
+    }
+
+    /* Light Theme */
+    body.light {
+      background-color: #f0f0f0;
+      color: #222;
+    }
+    body.light td {
+      background-color: #fff;
+      color: #222;
+      border: 1px solid #ccc;
+    }
+    body.light td:hover {
+      background-color: #eee;
+    }
+    body.light #reset, body.light #theme-toggle {
+      background-color: #e0e0e0;
+      border: 1px solid #aaa;
+      color: #222;
+    }
+    body.light #reset:hover, body.light #theme-toggle:hover {
+      background-color: #d0d0d0;
+    }
+
+    table {
+      border-collapse: collapse;
+      margin: 20px auto;
+    }
+    td {
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      font-size: 2em;
+      cursor: pointer;
+    }
+    h1, #status, #reset, #theme-toggle {
+      text-align: center;
+      margin: 10px;
+    }
+    #reset, #theme-toggle {
+      padding: 8px 16px;
+      font-size: 1em;
+      cursor: pointer;
+      border-radius: 4px;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body class="dark">
+  <h1>Tic Tac Toe</h1>
+  <div id="status">Turn: X</div>
+  <table>
+    <tbody>
+      <tr><td></td><td></td><td></td></tr>
+      <tr><td></td><td></td><td></td></tr>
+      <tr><td></td><td></td><td></td></tr>
+    </tbody>
+  </table>
+  <div>
+    <button id="reset">Reset Game</button>
+    <button id="theme-toggle">Switch Theme</button>
+  </div>
+
+  <script>
+    const cells = document.querySelectorAll("td");
+    const status = document.getElementById("status");
+    const resetBtn = document.getElementById("reset");
+    const themeBtn = document.getElementById("theme-toggle");
+    let turn = "X";
+    let gameOver = false;
+
+    function checkWinner() {
+      const winPatterns = [
+        [0,1,2], [3,4,5], [6,7,8],
+        [0,3,6], [1,4,7], [2,5,8],
+        [0,4,8], [2,4,6]
+      ];
+      const board = Array.from(cells).map(cell => cell.textContent);
+      for (const [a, b, c] of winPatterns) {
+        if (board[a] && board[a] === board[b] && board[b] === board[c]) {
+          status.textContent = `🎉 ${board[a]} wins!`;
+          gameOver = true;
+          return;
+        }
+      }
+      if (board.every(cell => cell !== "")) {
+        status.textContent = "😐 It's a draw!";
+        gameOver = true;
+      }
+    }
+
+    function resetGame() {
+      cells.forEach(cell => cell.textContent = "");
+      turn = "X";
+      gameOver = false;
+      status.textContent = "Turn: X";
+    }
+
+    function toggleTheme() {
+      const body = document.body;
+      if (body.classList.contains("dark")) {
+        body.classList.remove("dark");
+        body.classList.add("light");
+        themeBtn.textContent = "Switch to Dark Theme";
+      } else {
+        body.classList.remove("light");
+        body.classList.add("dark");
+        themeBtn.textContent = "Switch to Light Theme";
+      }
+    }
+
+    cells.forEach(cell => {
+      cell.onclick = () => {
+        if (cell.textContent === "" && !gameOver) {
+          cell.textContent = turn;
+          checkWinner();
+          if (!gameOver) {
+            turn = turn === "X" ? "O" : "X";
+            status.textContent = `Turn: ${turn}`;
+          }
+        }
+      };
+    });
+
+    resetBtn.onclick = resetGame;
+    themeBtn.onclick = toggleTheme;
+  </script>
+</body>
+</html>

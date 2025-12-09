@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tic Tac Toe</title>
+  <style>
+    table { border-collapse: collapse; margin: 20px auto; }
+    td {
+      width: 60px; height: 60px; text-align: center;
+      font-size: 2em; border: 1px solid black;
+      cursor: pointer;
+    }
+    h1, #status, #reset {
+      text-align: center;
+      margin: 10px;
+    }
+    #reset {
+      padding: 6px 12px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Tic Tac Toe</h1>
+  <div id="status">Turn: X</div>
+  <table>
+    <tbody>
+      <tr><td></td><td></td><td></td></tr>
+      <tr><td></td><td></td><td></td></tr>
+      <tr><td></td><td></td><td></td></tr>
+    </tbody>
+  </table>
+  <div>
+    <button id="reset">Reset Game</button>
+  </div>
+
+  <script>
+    const cells = document.querySelectorAll("td");
+    const status = document.getElementById("status");
+    const resetBtn = document.getElementById("reset");
+    let turn = "X";
+    let gameOver = false;
+
+    function checkWinner() {
+      const winPatterns = [
+        [0,1,2], [3,4,5], [6,7,8],  // rows
+        [0,3,6], [1,4,7], [2,5,8],  // columns
+        [0,4,8], [2,4,6]            // diagonals
+      ];
+      const board = Array.from(cells).map(cell => cell.textContent);
+
+      for (const pattern of winPatterns) {
+        const [a, b, c] = pattern;
+        if (board[a] && board[a] === board[b] && board[b] === board[c]) {
+          status.textContent = `🎉 ${board[a]} wins!`;
+          gameOver = true;
+          return;
+        }
+      }
+
+      if (board.every(cell => cell !== "")) {
+        status.textContent = "😐 It's a draw!";
+        gameOver = true;
+      }
+    }
+
+    function resetGame() {
+      cells.forEach(cell => cell.textContent = "");
+      turn = "X";
+      gameOver = false;
+      status.textContent = "Turn: X";
+    }
+
+    cells.forEach(cell => {
+      cell.onclick = () => {
+        if (cell.textContent === "" && !gameOver) {
+          cell.textContent = turn;
+          checkWinner();
+          if (!gameOver) {
+            turn = turn === "X" ? "O" : "X";
+            status.textContent = `Turn: ${turn}`;
+          }
+        }
+      };
+    });
+
+    resetBtn.onclick = resetGame;
+  </script>
+</body>
+</html>

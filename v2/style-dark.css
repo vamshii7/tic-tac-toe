@@ -1,0 +1,38 @@
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: Arial, sans-serif;
+}
+table {
+  border-collapse: collapse;
+  margin: 20px auto;
+}
+td {
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  font-size: 2em;
+  border: 1px solid #444;
+  cursor: pointer;
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+td:hover {
+  background-color: #2a2a2a;
+}
+h1, #status, #reset, #toggle-theme {
+  text-align: center;
+  margin: 10px;
+}
+#reset, #toggle-theme {
+  padding: 8px 16px;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: #333;
+  border: 1px solid #555;
+  color: #fff;
+  border-radius: 4px;
+}
+#reset:hover, #toggle-theme:hover {
+  background-color: #444;
+}

@@ -1,0 +1,71 @@
+trigger:
+  branches:
+    include:
+      - main
+
+variables:
+  dockerRegistryServiceConnection: 'ACR-SERVICE-CONN'
+  containerRegistry: 'youracr.azurecr.io'
+  imageName: 'tictactoe'
+  kubernetesServiceConnection: 'AKS-SERVICE-CONN'
+  k8sNamespace: 'default'
+  k8sManifestPath: 'k8s/dev'
+  tag: '$(Build.BuildId)'
+
+stages:
+
+- stage: Lint_and_Test
+  displayName: Code Validation & Tests
+  jobs:
+    - job: LintTest
+      pool:
+        vmImage: 'ubuntu-latest'
+      steps:
+        - task: UsePythonVersion@0
+          inputs:
+            versionSpec: '3.x'
+        - script: |
+            pip install flake8 pytest
+            flake8 v2/*.py --count --select=E9,F63,F7,F82 --show-source --statistics
+            pytest tests/
+          displayName: 'Lint and Unit Test'
+
+- stage: Build
+  displayName: Build & Push Docker Image
+  dependsOn: Lint_and_Test
+  jobs:
+    - job: DockerBuildPush
+      pool:
+        vmImage: 'ubuntu-latest'
+      steps:
+        - task: Docker@2
+          inputs:
+            containerRegistry: $(dockerRegistryServiceConnection)
+            repository: $(imageName)
+            command: buildAndPush
+            Dockerfile: v2/Dockerfile
+            tags: |
+              $(tag)
+              latest
+
+- stage: Deploy
+  displayName: Deploy to AKS
+  dependsOn: Build
+  condition: succeeded()
+  jobs:
+    - deployment: DeployToAKS
+      environment: 'aks-dev'
+      strategy:
+        runOnce:
+          deploy:
+            steps:
+              - task: KubernetesManifest@1
+                inputs:
+                  action: deploy
+                  kubernetesServiceConnection: $(kubernetesServiceConnection)
+                  namespace: $(k8sNamespace)
+                  manifests: |
+                    $(k8sManifestPath)/deployment.yaml
+                    $(k8sManifestPath)/service.yaml
+                  containers: |
+                    $(imageName)=$(containerRegistry)/$(imageName):$(tag)
