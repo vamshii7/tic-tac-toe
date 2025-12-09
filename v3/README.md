@@ -90,11 +90,11 @@ docker run -d -p 8080:80 vamshii7/tictactoe:v3
 
 Open browser:
 
-👉 http://localhost:8080
+👉 `http://localhost:8080`
 
 If deployed on server:
 
-👉 http://<your-server-ip>
+👉 `http:// <your-server-ip>`
 
 ---
 
