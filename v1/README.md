@@ -41,8 +41,7 @@ docker pull vamshii7/tictactoe:v1
 docker run -d -p 8081:80 vamshii7/tictactoe:v1
 ```
 
-Visit:  
-👉 http://localhost:8081
+Visit: 👉 http://localhost:8081
 
 ---
 
@@ -60,8 +59,7 @@ Run it:
 docker run -d -p 8081:80 tictactoe:v1
 ```
 
-Visit:  
-👉 http://localhost:8081
+Visit: 👉 http://localhost:8081
 
 ---
 

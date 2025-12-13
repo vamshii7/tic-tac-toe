@@ -4,7 +4,7 @@ V2 introduces a **modernized UI**, **Light/Dark themes**, and improved responsiv
 
 ---
 
-## 🚀 Tic-Tac-Toe - Version 2
+## 🚀 Tic-Tac-Toe - Version 2 (See all updates for this version here → [`changelog.md`](./changelog.md))
 
 ### **Directory:** `v2/`
 
@@ -42,8 +42,7 @@ docker pull vamshii7/tictactoe:v2
 docker run -d -p 8081:80 vamshii7/tictactoe:v2
 ```
 
-Visit:  
-👉 http://localhost:8081
+Visit: 👉 http://localhost:8081
 
 ---
 
@@ -61,8 +60,7 @@ Run it:
 docker run -d -p 8081:80 tictactoe:v2
 ```
 
-Visit:  
-👉 http://localhost:8081
+Visit: 👉 http://localhost:8081
 
 ---
 

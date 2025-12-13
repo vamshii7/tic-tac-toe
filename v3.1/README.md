@@ -37,8 +37,7 @@ docker pull vamshii7/tictactoe:v3.1
 docker run -d -p 8081:80 vamshii7/tictactoe:v3.1
 ```
 
-Visit:  
-👉 http://localhost:8081
+Visit:  👉 http://localhost:8081
 
 ---
 
@@ -91,13 +90,9 @@ After running Docker:
 docker run -d -p 8081:80 vamshii7/tictactoe:v3.1
 ```
 
-Open browser:
+Open browser: 👉 `http://localhost:8081`
 
-👉 `http://localhost:8081`
-
-If deployed on server:
-
-👉 `http:// <your-server-ip>:8081`
+If deployed on server: 👉 `http:// <your-server-ip>:8081`
 
 ---
 

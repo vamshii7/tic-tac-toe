@@ -4,7 +4,7 @@ V1.1 improves the original version by giving players more control over the game 
 
 ---
 
-## 🚀 Tic-Tac-Toe - Version 1.1
+## 🚀 Tic-Tac-Toe - Version 1.1 (See all updates for this version here → [`changelog.md`](./changelog.md))
 
 ### **Directory:** `v1.1/`
 
@@ -40,8 +40,7 @@ docker pull vamshii7/tictactoe:v1.1
 docker run -d -p 8081:80 vamshii7/tictactoe:v1.1
 ```
 
-Visit:  
-👉 http://localhost:8081
+Visit: 👉 http://localhost:8081
 
 ---
 
@@ -59,8 +58,7 @@ Run it:
 docker run -d -p 8081:80 tictactoe:v1.1
 ```
 
-Visit:  
-👉 http://localhost:8081
+Visit: 👉 http://localhost:8081
 
 ---
 
