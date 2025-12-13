@@ -4,7 +4,7 @@ V3.1 is an **enhanced, polished, responsive, keyboard‑accessible, CPU‑enable
 
 ---
 
-## 🚀 Tic-Tac-Toe - Version 3.1
+## 🚀 Tic-Tac-Toe - Version 3.1 (See all updates for this version here → [`changelog.md`](./changelog.md))
 
 ### **Directory:** `v3.1/`
 
