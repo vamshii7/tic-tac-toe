@@ -4,7 +4,8 @@ V1.1 improves the original version by giving players more control over the game 
 
 ---
 
-## 🚀 Tic-Tac-Toe - Version 1.1 (See all updates for this version here → [`changelog.md`](./changelog.md))
+## 🚀 Tic-Tac-Toe - Version 1.1 
+## See all updates for this version here → [`changelog.md`](./changelog.md)
 
 ### **Directory:** `v1.1/`
 

@@ -4,7 +4,8 @@ V2 introduces a **modernized UI**, **Light/Dark themes**, and improved responsiv
 
 ---
 
-## 🚀 Tic-Tac-Toe - Version 2 (See all updates for this version here → [`changelog.md`](./changelog.md))
+## 🚀 Tic-Tac-Toe - Version 2 
+## See all updates for this version here → [`changelog.md`](./changelog.md)
 
 ### **Directory:** `v2/`
 
