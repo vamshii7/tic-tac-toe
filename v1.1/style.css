@@ -1,0 +1,55 @@
+table {
+  border-collapse: collapse;
+  margin: 20px auto;
+}
+
+td {
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  font-size: 2em;
+  border: 2px solid #333;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+
+td.X {
+  color: #e53935; /* Red for X */
+}
+
+td.O {
+  color: #1e88e5; /* Blue for O */
+}
+
+h1,
+#status,
+#reset {
+  text-align: center;
+  margin: 10px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #222;
+}
+
+#status {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #444;
+}
+
+#reset {
+  padding: 10px 20px;
+  font-size: 1.1em;
+  cursor: pointer;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+#reset:hover {
+  background-color: #43a047;
+}
