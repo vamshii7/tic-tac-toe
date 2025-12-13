@@ -1,16 +1,29 @@
-# Tic Tac Toe – Version 1 (Basic Light Theme)
+# Tic Tac Toe - V1 (Initial Release)
 
-Version 1 is the simplest form of the Tic-Tac-Toe application.  
-It includes a classic UI, light theme, and base gameplay logic.
+V1 is the **first and simplest version** of the Tic‑Tac‑Toe web application - a clean, lightweight, browser‑based game built using **pure HTML, CSS, and JavaScript**.
 
 ---
 
-## 🌟 Features
-- Classic Tic-Tac-Toe board (3x3)
-- Light theme UI
-- Basic JavaScript gameplay logic
-- Auto-reset game after a win or draw
-- Zero dependencies - pure HTML/CSS/JS
+## 🚀 Tic-Tac-Toe - Version 1
+
+### **Directory:** `v1/`
+
+V1 includes the foundational gameplay with:
+- 🎮 Classic 3×3 Tic‑Tac‑Toe  
+- 🎨 Light theme UI  
+- 🔄 Auto-reset after win/draw  
+- 🧱 Simple HTML/CSS layout  
+- ⚡ Lightweight vanilla JavaScript logic  
+
+---
+
+## 🕹️ How V1 Works
+
+### **Frontend**
+- Static HTML structure  
+- Basic CSS styling  
+- Simple JavaScript game logic  
+- Auto-reset triggers after each match  
 
 ---
 
@@ -25,11 +38,11 @@ docker pull vamshii7/tictactoe:v1
 
 ### Run container
 ```bash
-docker run -d -p 5000:5000 vamshii7/tictactoe:v1
+docker run -d -p 8081:80 vamshii7/tictactoe:v1
 ```
 
 Visit:  
-👉 http://localhost:5000
+👉 http://localhost:8081
 
 ---
 
@@ -44,11 +57,11 @@ docker build -t tictactoe:v1 .
 Run it:
 
 ```bash
-docker run -d -p 5000:5000 tictactoe:v1
+docker run -d -p 8081:80 tictactoe:v1
 ```
 
 Visit:  
-👉 http://localhost:5000
+👉 http://localhost:8081
 
 ---
 

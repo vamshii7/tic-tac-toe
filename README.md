@@ -1,109 +1,125 @@
-# Changelog - Tic Tac Toe Web Application
+<div align="center">
 
-All notable changes to this project are documented here.  
-This changelog follows a linear release history for:
+# 🎮 Tic‑Tac‑Toe - Modern Web Game  
+### A clean, responsive, theme‑adaptive Tic‑Tac‑Toe built for the web and deployed like a real production app.
 
-**v1 → v1.1 → v2 → v3**
+---
+![GitHub Stars](https://img.shields.io/github/stars/vamshii7/tic-tac-toe?style=for-the-badge)
+![GitHub Forks](https://img.shields.io/github/forks/vamshii7/tic-tac-toe?style=for-the-badge)
+![Docker Pulls](https://img.shields.io/docker/pulls/vamshii7/tictactoe?style=for-the-badge)
+![Version](https://img.shields.io/badge/version-v3.2-blue?style=for-the-badge)
+
+</div>
 
 ---
 
-## 🟩 Version 3 - Advanced Web App (Nginx + CPU + Undo)
-**Release Type:** Major  
-**Directory:** `v3/`  
-**Status:** Latest & Most Feature-Rich Release
+## 📌 Overview
 
-### Added
-- Brand new **modern dark UI** with glassmorphism styling
-- **CPU Mode (1-Player)** with:
-  - Winning move detection
-  - Blocking logic
-  - Random fallback moves
-- **Undo last move** functionality
-- **Random Move** generator button
-- **Persistent scores** using `localStorage`
-- **Keyboard navigation** (Arrow keys + Enter support)
-- **Nginx static hosting** for production builds
-- New **Dockerfile** using `nginx:alpine`
-- Enhanced accessibility (`role`, `aria-live`, `aria-label`)
-- Responsive layout for mobile and tablets
+This repository contains **multiple versions** of a fully‑functional Tic‑Tac‑Toe web application - evolving from a simple HTML/CSS/JS game into a **production‑ready, Dockerized, Nginx‑served, theme‑adaptive web app**.
 
-### Improved
-- Better UI alignment and spacing
-- More polished game animations and interactions
-- Cleaner board rendering logic
-- Improved end-game highlighting (winning line effect)
-- Better state management for CPU and player turns
+Each version is preserved in its own directory with its own README, making the repo easy to navigate, maintain, and showcase.
 
-### Fixed
-- Corrected focus behavior during keyboard navigation
-- Resolved occasional double-click issues when CPU was active
-- Prevented unwanted next-move after end-game
+This project is perfect for:
+
+- Front‑end learning  
+- UI/UX evolution tracking  
+- DevOps deployment demos  
+- Docker + Nginx static hosting examples  
+- Portfolio presentation  
 
 ---
 
-## 🟧 Version 2 - Theme Toggle + UI Improvements
-**Release Type:** Feature Update  
-**Directory:** `v2/`
+## ✨ Key Highlights
 
-### Added
-- 🌓 **Light/Dark theme toggle**
-- Two stylesheets:
-  - `style-light.css`
-  - `style-dark.css`
-- Enhanced UI visual elements
-- Updated typography and spacing
+### ✅ Modern Web App Evolution
+- **v1 → v3.2** shows a clear progression from basic UI to a polished, animated, theme‑adaptive experience.
+- Each version is isolated, documented, and production‑ready.
 
-### Improved
-- Cleaner DOM structure
-- Better responsiveness and color accessibility
-- Reset button behavior consistent with v1.1
+### ✅ DevOps‑Friendly Deployment
+- Fully containerized using **Docker + Nginx**  
+- Lightweight `nginx:alpine` base image  
+- Zero‑config static hosting  
+- DockerHub image available: `vamshii7/tictactoe`
 
-### Fixed
-- Minor layout issues on smaller screens
-
----
-
-## 🟨 Version 1.1 - Manual Reset Button (No Auto Reset)
-**Release Type:** Minor Update  
-**Directory:** `v1.1/`
-
-### Added
-- 🆕 **Reset button** allowing players to manually restart the game
-
-### Removed
-- ❌ Auto-reset gameplay (no automatic restart after win/draw)
-
-### Improved
-- Better game flow for multiple-round play
-- Updated post-win/draw status message
+### ✅ Front‑End Engineering Showcase
+- Clean HTML structure  
+- Modular CSS with themes  
+- Vanilla JavaScript game logic  
+- Celebration popup + confetti animation  
+- Accessibility (ARIA, keyboard navigation)  
 
 ---
 
-## 🟦 Version 1 - Initial Release (Light Theme Only)
-**Release Type:** Initial Launch  
-**Directory:** `v1/`
+## 🗂️ Project Structure
 
-### Features
-- Classic Tic-Tac-Toe 3×3 gameplay
-- Light theme only
-- Basic HTML/CSS/JavaScript implementation
-- Auto reset after win/draw
-- Modern but simple UI
+## 📁 Tic‑Tac‑Toe Repository Structure
+This repository contains multiple versions of a progressively enhanced Tic‑Tac‑Toe web application. Each version is isolated in its own directory with its own README, changelog, and deployment files.
+
+### 🗂️ Root Structure
+
+tic-tac-toe/  
+│  
+├── pipelines/           # CI/CD pipeline configs (optional or future use)  
+├── tests/               # Test scripts or automation (optional or future use)  
+│  
+├── v1/                  # Initial release (light theme, auto-reset)  
+├── v1.1/                # Manual reset update  
+├── v2/                  # Theme toggle + UI improvements  
+├── v3/                  # CPU mode, undo, Nginx hosting, Dockerfile  
+├── v3.1/                # UI polish, CPU improvements, bug fixes  
+├── v3.2/                # Celebration popup, confetti, theme system  
+│  
+├── CHANGELOG.md         # Combined changelog across all versions  
+├── README.md            # Root-level project overview  
+└── REPO_STRUCTURE.md    # This file  
+
+### 📦 Version Folder Contents
+Each version folder typically contains:  
+
+vX/  
+├── index.html           # Main HTML file  
+├── style.css            # Core stylesheet  
+├── style-dark.css       # Dark theme (v2 only)  
+├── style-light.css      # Light theme (v2 only)  
+├── styles.css           # Unified theme system (v3+)  
+├── app.js               # Main game logic (v3+)  
+├── script.js            # Legacy JS (v1–v2)  
+├── server.py            # Optional local server (for testing)  
+├── Dockerfile           # Dockerized static deployment  
+├── nginx.conf           # Custom Nginx config  
+├── README.md            # Version-specific documentation  
+└── changelog.md         # Version-specific changelog  
 
 ---
 
-## 📌 Version Summary
+## 🧠 Version Highlights
 
-| Version | Theme Support | Reset | CPU Mode | Undo | Nginx | Notes |
-|--------|---------------|--------|----------|------|--------|-------|
-| **v1** | Light | Auto-reset | No | No | No | First basic version |
-| **v1.1** | Light | Manual reset | No | No | No | Small improvement |
-| **v2** | Light + Dark | Manual reset | No | No | No | UI upgraded |
-| **v3** | Advanced Dark | Manual reset | Yes | Yes | Yes | Production-ready |
+| Version | Theme Support            | Base Image      | Notes |
+|---------|---------------------------|------------------|-------|
+| v1      | Light only                | python:alpine    | Initial basic version |
+| v1.1    | Light only                | python:alpine    | Manual reset added |
+| v2      | Light + Dark              | python:alpine    | Theme toggle + UI improvements |
+| v3      | Dark only                 | nginx:alpine     | CPU mode, Undo, Nginx migration |
+| v3.1    | Dark + Light + Black      | nginx:alpine     | Confetti added + UI polish |
+| v3.2    | Dark + Light + Black      | nginx:alpine     | Celebration popup + full theme system |
+
+---  
+
+## 🐳 Run Using Docker
+
+### Pull from DockerHub
+```bash
+docker pull vamshii7/tictactoe:<tag>
+```
+### Run container
+```bash
+docker run -d -p 8081:80 vamshii7/tictactoe:<tag>
+```
+Open in browser: 👉 `http://localhost:8081`
 
 ---
 
-## 👨‍💻 Author  
+## 👨‍💻 Maintainer  
 **Vamshi Krishna**  
 DevOps Engineer | DevOps & Kubernetes Enthusiast  
 [Connect on LinkedIn](https://in.linkedin.com/in/vamshi7)  

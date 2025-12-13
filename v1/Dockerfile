@@ -1,9 +1,8 @@
-FROM python:3.10-slim
+FROM python:3.9-alpine
 
 WORKDIR /app
-
 COPY . .
 
-EXPOSE 5000
+EXPOSE 80
 
 CMD ["python", "server.py"]

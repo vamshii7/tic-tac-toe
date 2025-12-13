@@ -1,23 +1,25 @@
-# Tic Tac Toe - V3 (Advanced Web App)
+# Tic Tac Toe - V3.1 (Advanced Web App)
 
-V3 is a **fully redesigned, modern, responsive, keyboard‑accessible, CPU‑enabled Tic‑Tac‑Toe web application** served via **Nginx + Docker**.
+V3.1 is an **enhanced, polished, responsive, keyboard‑accessible, CPU‑enabled Tic‑Tac‑Toe web application** served via **Nginx + Docker**, now featuring **confetti celebrations**, improved CPU logic, and refined UI/UX.
 
 ---
 
-## 🚀 Tic-Tac-Toe - Version 3 (Latest)
+## 🚀 Tic-Tac-Toe - Version 3.1
 
-### **Directory:** `v3/`
+### **Directory:** `v3.1/`
 
-V3 is the most advanced version with:
-- 🎨 Fully modern dark UI with glass‑morphism  
-- 🧠 **CPU Mode (1‑player)** - smart logic (win/block/random)  
+V3.1 builds on top of V3 with several improvements:
+
+- 🎉 **Confetti celebration animation**  
+- 🎨 Polished dark UI with smoother transitions  
+- 🧠 **Improved CPU Mode** (smarter win/block logic)  
 - 👥 **2‑Player local mode**  
 - ↩️ Undo Move  
 - 🎲 Auto-random move generator  
 - 💾 **Persistent scores** using localStorage  
 - ♿ Full keyboard navigation (arrows + Enter)  
 - ⚡ Optimized Nginx static hosting  
-- 🐳 Fully Dockerized
+- 🐳 Fully Dockerized (nginx:alpine)
 
 ---
 
@@ -27,12 +29,12 @@ DockerHub repo: **vamshii7/tictactoe**
 
 ### Pull image
 ```bash
-docker pull vamshii7/tictactoe:v3
+docker pull vamshii7/tictactoe:v3.1
 ```
 
 ### Run container
 ```bash
-docker run -d -p 8081:80 vamshii7/tictactoe:v3
+docker run -d -p 8081:80 vamshii7/tictactoe:v3.1
 ```
 
 Visit:  
@@ -42,28 +44,29 @@ Visit:
 
 ## 🏗️ Build Docker Image (From Source)
 
-Inside `v3/` directory:
+Inside `v3.1/` directory:
 
 ```bash
-docker build -t tictactoe:v3 .
+docker build -t tictactoe:v3.1 .
 ```
 
 Run it:
 
 ```bash
-docker run -d -p 8081:80 tictactoe:v3
+docker run -d -p 8081:80 tictactoe:v3.1
 ```
 
 ---
 
-## ⚙️ How V3 Works
+## ⚙️ How V3.1 Works
 
 ### **Frontend**
 - Pure HTML + CSS + Vanilla JS  
 - Dynamic board generation  
 - CPU logic  
 - Undo history  
-- Keyboard-friendly navigation
+- Keyboard-friendly navigation  
+- Confetti celebration animation
 
 ### **Backend (Nginx)**
 - Nginx serves static assets  
@@ -72,7 +75,7 @@ docker run -d -p 8081:80 tictactoe:v3
 
 ---
 
-## 🐳 Dockerfile (Used in v3)
+## 🐳 Dockerfile (Used in v3.1)
 
 - Uses `nginx:alpine`
 - Copies HTML/CSS/JS into container
@@ -85,7 +88,7 @@ docker run -d -p 8081:80 tictactoe:v3
 After running Docker:
 
 ```bash
-docker run -d -p 8081:80 vamshii7/tictactoe:v3
+docker run -d -p 8081:80 vamshii7/tictactoe:v3.1
 ```
 
 Open browser:
@@ -94,7 +97,7 @@ Open browser:
 
 If deployed on server:
 
-👉 `http:// <your-server-ip>`
+👉 `http:// <your-server-ip>:8081`
 
 ---
 
