@@ -8,6 +8,8 @@ This version introduces a **celebration popup**, **confetti**, and a **complete 
 
 ## 🚀 Tic-Tac-Toe - Version 3.2 (Latest & Most Advanced)
 
+## See all updates for this version here → [`changelog.md`](./changelog.md)
+
 ### **Directory:** `v3.2/`
 
 V3.2 includes everything from V3 and v3.2, plus:
