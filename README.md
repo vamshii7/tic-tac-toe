@@ -12,6 +12,15 @@
 </div>
 
 ---
+## 🚀 Live Demo
+### 🎮 Play Now  
+Experience the latest stable version of **Tic‑Tac‑Toe** directly in your browser:
+
+### 👉[▶️*CLICK HERE TO PLAY NOW !!*](https://vamshii7.github.io/tic-tac-toe/)
+
+This deployment reflects the most recent production build, including UI improvements, accessibility updates, and gameplay enhancements.
+
+---
 
 ## 📌 Overview
 
